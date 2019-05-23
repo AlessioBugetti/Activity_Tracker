@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/activity_tracker.dir/main.cpp.o CMakeFiles/activity_tracker.dir/Time.cpp.o  -o activity_tracker 
