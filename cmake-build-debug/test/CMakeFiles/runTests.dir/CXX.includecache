@@ -292,7 +292,3 @@ gtest/gtest.h
 ../Time.h
 /home/alessio/CLionProjects/activity_tracker/Time.h
 
-/home/alessio/CLionProjects/activity_tracker/test/runAllTests.cpp
-gtest/gtest.h
-/home/alessio/CLionProjects/activity_tracker/test/gtest/gtest.h
-

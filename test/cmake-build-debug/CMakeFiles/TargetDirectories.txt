@@ -1,7 +1,0 @@
-/home/alessio/CLionProjects/activity_tracker/test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/alessio/CLionProjects/activity_tracker/test/cmake-build-debug/CMakeFiles/runTests.dir
-/home/alessio/CLionProjects/activity_tracker/test/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/alessio/CLionProjects/activity_tracker/test/cmake-build-debug/lib/googletest/CMakeFiles/rebuild_cache.dir
-/home/alessio/CLionProjects/activity_tracker/test/cmake-build-debug/lib/googletest/CMakeFiles/gtest.dir
-/home/alessio/CLionProjects/activity_tracker/test/cmake-build-debug/lib/googletest/CMakeFiles/edit_cache.dir
-/home/alessio/CLionProjects/activity_tracker/test/cmake-build-debug/lib/googletest/CMakeFiles/gtest_main.dir
