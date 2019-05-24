@@ -1,0 +1,35 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/alessio/CLionProjects/activity_tracker/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bcfbe/fast 
+/usr/bin/make -f CMakeFiles/cmTC_bcfbe.dir/build.make CMakeFiles/cmTC_bcfbe.dir/build
+make[1]: ingresso nella directory "/home/alessio/CLionProjects/activity_tracker/cmake-build-debug/CMakeFiles/CMakeTmp"
+Building C object CMakeFiles/cmTC_bcfbe.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_bcfbe.dir/CheckSymbolExists.c.o   -c /home/alessio/CLionProjects/activity_tracker/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_bcfbe
+/snap/clion/70/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bcfbe.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_bcfbe.dir/CheckSymbolExists.c.o  -o cmTC_bcfbe 
+CMakeFiles/cmTC_bcfbe.dir/CheckSymbolExists.c.o: nella funzione "main":
+CheckSymbolExists.c:(.text+0x1b): riferimento non definito a "pthread_create"
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_bcfbe.dir/build.make:86: recipe for target 'cmTC_bcfbe' failed
+make[1]: *** [cmTC_bcfbe] Error 1
+make[1]: uscita dalla directory "/home/alessio/CLionProjects/activity_tracker/cmake-build-debug/CMakeFiles/CMakeTmp"
+Makefile:121: recipe for target 'cmTC_bcfbe/fast' failed
+make: *** [cmTC_bcfbe/fast] Error 2
+
+File /home/alessio/CLionProjects/activity_tracker/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/alessio/CLionProjects/activity_tracker/cmake-build-debu
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/70/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/snap/clion/70/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -123,6 +123,58 @@ activity_tracker/fast:
 	$(MAKE) -f CMakeFiles/activity_tracker.dir/build.make CMakeFiles/activity_tracker.dir/build
 .PHONY : activity_tracker/fast
 
+#=============================================================================
+# Target rules for targets named core
+
+# Build rule for target.
+core: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core
+.PHONY : core
+
+# fast build rule for target.
+core/fast:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/build
+.PHONY : core/fast
+
+#=============================================================================
+# Target rules for targets named runTests
+
+# Build rule for target.
+runTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runTests
+.PHONY : runTests
+
+# fast build rule for target.
+runTests/fast:
+	$(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/build
+.PHONY : runTests/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest.dir/build.make test/lib/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest_main.dir/build.make test/lib/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
 Time.o: Time.cpp.o
 
 .PHONY : Time.o
@@ -130,6 +182,7 @@ Time.o: Time.cpp.o
 # target to build an object file
 Time.cpp.o:
 	$(MAKE) -f CMakeFiles/activity_tracker.dir/build.make CMakeFiles/activity_tracker.dir/Time.cpp.o
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Time.cpp.o
 .PHONY : Time.cpp.o
 
 Time.i: Time.cpp.i
@@ -139,6 +192,7 @@ Time.i: Time.cpp.i
 # target to preprocess a source file
 Time.cpp.i:
 	$(MAKE) -f CMakeFiles/activity_tracker.dir/build.make CMakeFiles/activity_tracker.dir/Time.cpp.i
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Time.cpp.i
 .PHONY : Time.cpp.i
 
 Time.s: Time.cpp.s
@@ -148,6 +202,7 @@ Time.s: Time.cpp.s
 # target to generate assembly for a file
 Time.cpp.s:
 	$(MAKE) -f CMakeFiles/activity_tracker.dir/build.make CMakeFiles/activity_tracker.dir/Time.cpp.s
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Time.cpp.s
 .PHONY : Time.cpp.s
 
 main.o: main.cpp.o
@@ -157,6 +212,7 @@ main.o: main.cpp.o
 # target to build an object file
 main.cpp.o:
 	$(MAKE) -f CMakeFiles/activity_tracker.dir/build.make CMakeFiles/activity_tracker.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -166,6 +222,7 @@ main.i: main.cpp.i
 # target to preprocess a source file
 main.cpp.i:
 	$(MAKE) -f CMakeFiles/activity_tracker.dir/build.make CMakeFiles/activity_tracker.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -175,7 +232,62 @@ main.s: main.cpp.s
 # target to generate assembly for a file
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/activity_tracker.dir/build.make CMakeFiles/activity_tracker.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+test/TimeTests.o: test/TimeTests.cpp.o
+
+.PHONY : test/TimeTests.o
+
+# target to build an object file
+test/TimeTests.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/test/TimeTests.cpp.o
+.PHONY : test/TimeTests.cpp.o
+
+test/TimeTests.i: test/TimeTests.cpp.i
+
+.PHONY : test/TimeTests.i
+
+# target to preprocess a source file
+test/TimeTests.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/test/TimeTests.cpp.i
+.PHONY : test/TimeTests.cpp.i
+
+test/TimeTests.s: test/TimeTests.cpp.s
+
+.PHONY : test/TimeTests.s
+
+# target to generate assembly for a file
+test/TimeTests.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/test/TimeTests.cpp.s
+.PHONY : test/TimeTests.cpp.s
+
+test/runAllTests.o: test/runAllTests.cpp.o
+
+.PHONY : test/runAllTests.o
+
+# target to build an object file
+test/runAllTests.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/test/runAllTests.cpp.o
+.PHONY : test/runAllTests.cpp.o
+
+test/runAllTests.i: test/runAllTests.cpp.i
+
+.PHONY : test/runAllTests.i
+
+# target to preprocess a source file
+test/runAllTests.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/test/runAllTests.cpp.i
+.PHONY : test/runAllTests.cpp.i
+
+test/runAllTests.s: test/runAllTests.cpp.s
+
+.PHONY : test/runAllTests.s
+
+# target to generate assembly for a file
+test/runAllTests.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/test/runAllTests.cpp.s
+.PHONY : test/runAllTests.cpp.s
 
 # Help Target
 help:
@@ -183,15 +295,25 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... activity_tracker"
 	@echo "... edit_cache"
+	@echo "... activity_tracker"
+	@echo "... rebuild_cache"
+	@echo "... core"
+	@echo "... runTests"
+	@echo "... gtest"
+	@echo "... gtest_main"
 	@echo "... Time.o"
 	@echo "... Time.i"
 	@echo "... Time.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... test/TimeTests.o"
+	@echo "... test/TimeTests.i"
+	@echo "... test/TimeTests.s"
+	@echo "... test/runAllTests.o"
+	@echo "... test/runAllTests.i"
+	@echo "... test/runAllTests.s"
 .PHONY : help
 
 

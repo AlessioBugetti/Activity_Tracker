@@ -819,3 +819,17 @@ make[1]: uscita dalla directory "/home/alessio/CLionProjects/activity_tracker/cm
     Feature record: CXX_FEATURE:0cxx_variable_templates
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/alessio/CLionProjects/activity_tracker/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_66eb5/fast 
+/usr/bin/make -f CMakeFiles/cmTC_66eb5.dir/build.make CMakeFiles/cmTC_66eb5.dir/build
+make[1]: ingresso nella directory "/home/alessio/CLionProjects/activity_tracker/cmake-build-debug/CMakeFiles/CMakeTmp"
+Building C object CMakeFiles/cmTC_66eb5.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_66eb5.dir/CheckIncludeFile.c.o   -c /home/alessio/CLionProjects/activity_tracker/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_66eb5
+/snap/clion/70/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66eb5.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_66eb5.dir/CheckIncludeFile.c.o  -o cmTC_66eb5 
+make[1]: uscita dalla directory "/home/alessio/CLionProjects/activity_tracker/cmake-build-debug/CMakeFiles/CMakeTmp"
+
+

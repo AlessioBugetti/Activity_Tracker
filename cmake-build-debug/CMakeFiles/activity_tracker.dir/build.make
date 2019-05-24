@@ -94,6 +94,7 @@ activity_tracker_EXTERNAL_OBJECTS =
 activity_tracker: CMakeFiles/activity_tracker.dir/main.cpp.o
 activity_tracker: CMakeFiles/activity_tracker.dir/Time.cpp.o
 activity_tracker: CMakeFiles/activity_tracker.dir/build.make
+activity_tracker: libcore.a
 activity_tracker: CMakeFiles/activity_tracker.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alessio/CLionProjects/activity_tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable activity_tracker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/activity_tracker.dir/link.txt --verbose=$(VERBOSE)

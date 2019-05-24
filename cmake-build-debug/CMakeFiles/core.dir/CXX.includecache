@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alessio/CLionProjects/activity_tracker/Time.cpp
+stdexcept
+-
+Time.h
+/home/alessio/CLionProjects/activity_tracker/Time.h
+
+/home/alessio/CLionProjects/activity_tracker/Time.h
+
+/home/alessio/CLionProjects/activity_tracker/main.cpp
+iostream
+-
+
+/home/alessio/CLionProjects/activity_tracker/test/TimeTests.cpp
+gtest/gtest.h
+/home/alessio/CLionProjects/activity_tracker/test/gtest/gtest.h
+../Time.h
+/home/alessio/CLionProjects/activity_tracker/Time.h
+
+/home/alessio/CLionProjects/activity_tracker/test/runAllTests.cpp
+gtest/gtest.h
+/home/alessio/CLionProjects/activity_tracker/test/gtest/gtest.h
+
