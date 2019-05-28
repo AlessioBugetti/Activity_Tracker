@@ -26,7 +26,7 @@ Date::Date(int y, Months m, int d) : day(d), month(m), year(y) {
             throw std::domain_error("giorni sbagliati");
         }
     }else if(month==Months::Febbraio) {
-        if (day < 0 || day < 28) {
+        if (day < 0 || day > 28) {
             throw std::domain_error("giorni sbagliati");
         }
     }else if(day<0 || day>31) {
