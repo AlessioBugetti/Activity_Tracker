@@ -19,3 +19,11 @@ int Time::getHours() const {
 int Time::getMinutes() const {
     return minutes;
 }
+
+void Time::setHours(const int &h) {
+    hours = h;
+}
+
+void Time::setMinutes(const int &m) {
+    minutes = m;
+}

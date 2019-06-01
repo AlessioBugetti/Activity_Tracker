@@ -22,3 +22,23 @@ const int Activity::getEndHours() const {
 const int Activity::getEndMinutes() const {
     return end.getMinutes();
 }
+
+void Activity::setStartMinutes(const int &startMinutes) {
+    start.setMinutes(startMinutes);
+}
+
+void Activity::setStartHours(const int &startHours) {
+    start.setHours(startHours);
+}
+
+void Activity::setEndMinutes(const int &endMinutes) {
+    end.setMinutes(endMinutes);
+}
+
+void Activity::setEndHours(const int &endHours) {
+    end.setHours(endHours);
+}
+
+void Activity::setDescription(const std::string &d) {
+    description=d;
+}

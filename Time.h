@@ -14,6 +14,10 @@ public:
 
     int getMinutes() const;
 
+    void setHours(const int &h);
+
+    void setMinutes(const int &m);
+
 private:
     int hours;
     int minutes;

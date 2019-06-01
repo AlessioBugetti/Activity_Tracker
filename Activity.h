@@ -22,6 +22,16 @@ public:
 
     const int getEndMinutes() const;
 
+    void setDescription(const std::string &d);
+
+    void setStartMinutes(const int &startMinutes);
+
+    void setEndMinutes(const int &endMinutes);
+
+    void setStartHours(const int &startHours);
+
+    void setEndHours(const int &endHours);
+
 private:
     std::string description;
     Time start;
