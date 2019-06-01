@@ -24,3 +24,27 @@ TEST(Date, InvalidDateFeb) {
 TEST(Date, InvalidDateApr) {
     ASSERT_THROW(Date d(2018, Months::Aprile, 31),std::domain_error);
 }
+
+TEST(Date, ModifyDateDay) {
+    Date d(2018, Months::Gennaio, 1);
+    d.setDay(25);
+    ASSERT_EQ(25, d.getDay());
+    ASSERT_EQ(Months::Gennaio, d.getMonth());
+    ASSERT_EQ(2018, d.getYear());
+}
+
+TEST(Date, ModifyDateMonth) {
+    Date d(2018, Months::Gennaio, 1);
+    d.setMonth(Months::Aprile);
+    ASSERT_EQ(1, d.getDay());
+    ASSERT_EQ(Months::Aprile, d.getMonth());
+    ASSERT_EQ(2018, d.getYear());
+}
+
+TEST(Date, ModifyDateYear) {
+    Date d(2018, Months::Gennaio, 1);
+    d.setYear(2019);
+    ASSERT_EQ(1, d.getDay());
+    ASSERT_EQ(Months::Gennaio, d.getMonth());
+    ASSERT_EQ(2019, d.getYear());
+}

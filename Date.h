@@ -20,6 +20,12 @@ public:
 
     int getYear() const;
 
+    void setDay(const int &d);
+
+    void setYear(const int &y);
+
+    void setMonth(const Months &m);
+
 private:
     int day, year;
     Months month;

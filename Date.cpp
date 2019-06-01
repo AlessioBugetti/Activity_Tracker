@@ -33,3 +33,15 @@ Date::Date(int y, Months m, int d) : day(d), month(m), year(y) {
         throw std::domain_error("giorni sbagliati");
     }
 }
+
+void Date::setDay(const int &d) {
+    day=d;
+}
+
+void Date::setMonth(const Months &m) {
+    month=m;
+}
+
+void Date::setYear(const int &y) {
+    year=y;
+}
