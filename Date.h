@@ -31,5 +31,9 @@ private:
     Months month;
 };
 
+class DateComparator {
+public:
+    bool operator()(const Date &first, const Date &second) const;
+};
 
 #endif //ACTIVITY_TRACKER_DATE_H
