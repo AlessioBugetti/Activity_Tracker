@@ -31,7 +31,7 @@ public:
 
     bool isEmpty() const;
 
-    void lookActivities(Date d) const;
+    void lookActivities(Date &d) const;
 
 private:
     std::multimap<Date, Activity, DateComparator> tracker;
