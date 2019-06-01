@@ -32,6 +32,8 @@ public:
 
     void setEndHours(const int &endHours);
 
+    bool operator==(const Activity &second) const;
+
 private:
     std::string description;
     Time start;

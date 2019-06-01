@@ -5,6 +5,7 @@
 #ifndef ACTIVITY_TRACKER_DATE_H
 #define ACTIVITY_TRACKER_DATE_H
 
+#include <string>
 
 enum class Months {
     Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre
@@ -15,6 +16,8 @@ public:
     Date(int y, Months m, int d);
 
     Months getMonth() const;
+
+    std::string getMonthString() const;
 
     int getDay() const;
 

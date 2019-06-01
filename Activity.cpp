@@ -42,3 +42,13 @@ void Activity::setEndHours(const int &endHours) {
 void Activity::setDescription(const std::string &d) {
     description=d;
 }
+
+bool Activity::operator==(const Activity &second) const {
+    if(this->getDescription()==second.getDescription())
+        if(this->getStartHours()==second.getStartHours())
+            if(this->getStartMinutes()==second.getStartMinutes())
+                if(this->getEndHours()==second.getEndHours())
+                    if(this->getEndMinutes()==second.getEndMinutes())
+                        return true;
+    return false;
+}
