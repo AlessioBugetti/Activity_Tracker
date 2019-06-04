@@ -31,7 +31,6 @@ bool ActivityTracker::findActivity(Activity &a) const {
 void ActivityTracker::lookActivities(Date &d) const{
     auto itr = tracker.equal_range(d);
     initscr();
-    noecho();
     curs_set(FALSE);
     attron(A_REVERSE | A_BOLD);
     mvprintw(3, 5, "  Attività in data: %02d %s %04d  ", d.getDay(), d.getMonthString().c_str(), d.getYear());

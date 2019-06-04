@@ -7,18 +7,6 @@
 #include <stdexcept>
 #include "Date.h"
 
-int Date::getDay() const {
-    return day;
-}
-
-int Date::getYear() const {
-    return year;
-}
-
-Months Date::getMonth() const {
-    return month;
-}
-
 
 Date::Date(int y, Months m, int d) : day(d), month(m), year(y) {
     if (month==Months::Settembre || month==Months::Aprile || month==Months::Giugno || month==Months::Novembre) {
@@ -32,6 +20,18 @@ Date::Date(int y, Months m, int d) : day(d), month(m), year(y) {
     }else if(day<0 || day>31) {
         throw std::domain_error("giorni sbagliati");
     }
+}
+
+int Date::getDay() const {
+    return day;
+}
+
+int Date::getYear() const {
+    return year;
+}
+
+Months Date::getMonth() const {
+    return month;
 }
 
 void Date::setDay(const int &d) {

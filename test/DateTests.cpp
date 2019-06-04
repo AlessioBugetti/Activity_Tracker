@@ -48,3 +48,14 @@ TEST(Date, ModifyDateYear) {
     ASSERT_EQ(Months::Gennaio, d.getMonth());
     ASSERT_EQ(2019, d.getYear());
 }
+
+TEST(DateComparator, DateComparatorTest){
+    DateComparator d;
+    Date d1(2018, Months::Gennaio, 1);
+    Date d2(2018, Months::Gennaio, 31);
+    Date d3(2015, Months::Aprile, 4);
+    Date d4(2018, Months::Gennaio, 2);
+    ASSERT_TRUE(d.operator()(d1,d2));
+    ASSERT_TRUE(d.operator()(d3,d1));
+    ASSERT_TRUE(d.operator()(d1,d4));
+}
